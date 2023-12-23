@@ -1,0 +1,585 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #050e2d;
+}
+
+/* defiler le menu */
+::-webkit-scrollbar{
+    width: 12px;
+}
+::-webkit-scrollbar-thumb{
+    background: #1aeeef;
+    border-radius: 6px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 7px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+    z-index: 1000;
+    background: #1b2141;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+header .logo{
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+header .nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+
+header ul li{
+    list-style: none;
+    margin: 10px;
+}
+
+header ul li a{
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+header ul li a:hover{
+    background: #1aeeef;
+    color: #050e2d;
+    box-shadow: 0 0 10px #1aeeef;
+}
+
+header .action .boiteDeRecherche{
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border-radius: 5px;
+}
+
+header .action .boiteDeRecherche i{
+    font-size: 1.4em;
+    margin: 5px;
+    color: #222;
+}
+
+header .action .boiteDeRecherche input{
+    outline: none;
+    border: none;
+    font-size: 1em;
+    color: #222;
+}
+
+/* Contenu de la section Accueil */
+
+.banniere{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banniere .arrierePlan{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banniere .arrierePlan .contenu{
+    width: 50%;
+    height: 100%;
+}
+
+.banniere .arrierePlan .contenu h2{
+    font-size: 4em;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.banniere .arrierePlan .contenu p{
+    font-size: 1em;
+    color: #dbd9d9;
+    letter-spacing: 1px;
+}
+
+.banniere .arrierePlan .contenu a{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 0;
+    border: 1px solid #1aeeef;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.banniere .arrierePlan .contenu a:hover{
+    background: #1aeeef;
+    border: none;
+    color: #050e2d;
+    box-shadow: 0 0 10px #1aeeef;
+}
+
+.banniere .arrierePlan img{
+    width: 600px;
+    height: 600px;
+}
+
+/* Contenu de la section Articles */
+.jeux{
+    padding: 0px 100px;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 40px auto;
+}
+
+.jeux h2{
+    color: #fff;
+    margin: 10px 0;
+}
+
+.jeux ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.jeux ul li{
+    list-style: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 5px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.jeux ul li.active{
+    background: #1aeeef;
+    color: #050e2d;
+    box-shadow: 0 0 10px #1aeeef;
+}
+
+.jeux .boiteCarte{
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.jeux .boiteCarte .carte{
+    width: 280px;
+    border-radius: 10px;
+    margin: 20px 40px;
+    background: #1b2141;
+    overflow: hidden;
+}
+
+.jeux .boiteCarte .carte img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.jeux .boiteCarte .carte .contenu{
+    padding: 10px;
+}
+
+.jeux .boiteCarte .carte .contenu h4{
+    color: #fff;
+    margin: 15px 0;
+}
+
+.jeux .boiteCarte .carte .info{
+    border-top: 2px solid #35407e;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.jeux .boiteCarte .carte .info p{
+    font-size: 1em;
+    color: #fff;
+}
+
+.jeux .boiteCarte .carte .info p span{
+    color: #1aeeef;
+}
+
+.jeux .boiteCarte .carte .info a{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: 1px solid #1aeeef;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.jeux .boiteCarte .carte .info a:hover{
+    background: #1aeeef;
+    border: none;
+    color: #050e2d;
+    box-shadow: 0 0 10px #1aeeef;
+}
+
+#articles{
+    padding-top: 30px;
+}
+
+/* Contenu de la section Galerie */
+.tournoi{
+    padding: 0px 100px;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tournoi h2{
+    color: #fff;
+    margin: 10px 0;
+}
+
+.tournoi .boitePrincipale{
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.tournoi .boitePrincipale .boite{
+    width: 350px;
+    border-radius: 10px;
+    margin: 20px 40px;
+    background: #1b2141;
+    overflow: hidden;
+}
+
+.tournoi .boitePrincipale .boite img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.tournoi .boitePrincipale .boite .contenu{
+    padding: 10px;
+}
+
+.tournoi .boitePrincipale .boite .contenu h4{
+    color: #fff;
+    margin-top: 15px;
+}
+
+.tournoi .boitePrincipale .boite .contenu h4 span{
+    color: #1aeeef;
+}
+
+.tournoi .boitePrincipale .boite .contenu p{
+    text-align: justify;
+    color: #dbd9d9;
+    margin-top: 10px;
+}
+
+.tournoi .boitePrincipale .boite .contenu .btn{
+    display: flex;
+    justify-content: space-between;
+}
+
+.tournoi .boitePrincipale .boite .contenu .regarder{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 0;
+    background: #1aeeef;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    color: #050e2d;
+    letter-spacing: 1px;
+    box-shadow: 0 0 10px #1aeeef;
+}
+
+.tournoi .boitePrincipale .boite h4.contenu .regarder:hover{
+    border: 1px solid #1aeeef;
+    background: none;
+    color: #fff;
+    box-shadow: none;
+}
+
+.tournoi .boitePrincipale .boite .contenu .rejoindre{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: 1px solid #1aeeef;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.tournoi .boitePrincipale .boite .contenu .rejoindre:hover{
+    background: #1aeeef;
+    border: none;
+    color: #050e2d;
+    box-shadow: 0 0 10px #1aeeef;
+}
+
+#galerie{
+    padding-top: 60px;
+}
+
+/* Contenu de la section Tableau */
+#tableau {
+    padding: 0px 100px;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#tableau h2 {
+    color: #fff;
+    margin: 100px 0;
+    margin-bottom: -10px;
+}
+
+table {
+    width: 80%;
+    margin: auto;
+    background: #dbd9d9;
+    text-align: center;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
+    box-shadow: 0 2px 12px #1aeeef;
+}
+
+th,td {
+    padding: 12px 15px;
+}
+
+th {
+    background: #1aeeef;
+    color: #fafafa;
+    text-transform: uppercase;
+}
+
+tr:nth-child(odd) {
+    background-color: #eeeeee;
+}
+
+/* Contenu de la section inscription */
+#inscription{
+    padding: 0px 100px;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.conteneur{
+    width: 100%;
+    max-width: 650px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 28px;
+    margin: 0 28px;
+    border-radius: 10px;
+    box-shadow: inset -2px 2px 2px white;
+}
+
+.titre-formulaire{
+    font-size: 26px;
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 6px;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    border-bottom: solid 1px white;
+}
+
+.infoUtilisateurPrincipal{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.boiteSaisieUtilisateur:nth-child(2n){
+    justify-content: end;
+}
+
+.boiteSaisieUtilisateur{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    padding-bottom: 15px;
+}
+
+.boiteSaisieUtilisateur label{
+    width: 95%;
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 5px 0;
+}
+
+.boiteSaisieUtilisateur input{
+    height: 40px;
+    width: 95%;
+    border-radius: 7px;
+    outline: none;
+    border: 1px solid grey;
+    padding: 0 10px;
+}
+
+.genreTitre{
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+    border-bottom: 1px solid white;
+}
+
+.categorieGenre{
+    margin: 15px 0;
+    color: white;
+}
+
+.categorieGenre label{
+    padding: 0 20px 0 5px;
+}
+.categorieGenre label,
+.categorieGenre input,
+.btnSoumettre input{
+    cursor: pointer;
+}
+
+.btnSoumettre{
+    margin-top: 40px;
+}
+
+.btnSoumettre input{
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    font-size: 20px;
+    border: none;
+    border-radius: 3px;
+    color: rgb(209, 209, 209);
+    background: rgba(63, 114, 76, 0.7);
+}
+.btnSoumettre input:hover{
+    background: rgba(56, 204, 93, 0.7);
+    color: rgb(255, 255, 255);
+}
+
+#inscription{
+    padding-top: 30px;
+}
+
+
+/* Pied de page */
+footer {
+  padding: 10px 100px;
+}
+
+footer .info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .info .logo{
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+footer .info p{
+    color: #dbd9d9;
+}
+
+footer .info ul{
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .info ul li{
+    list-style: none;
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #1aeeef;
+}
+
+footer .info ul li:hover{
+    background: #1aeeef;
+    border: none;
+    box-shadow: 0 0 10px #1aeeef;
+}
+
+footer .info ul li a i{
+    font-size: 1.5em;
+    color: #fff;
+}
+
+footer .info ul li:hover a i{
+    color: #050e2d;
+}
